@@ -46,3 +46,21 @@ console.log("User Category:", userCategory);
 let isAuthenticated = true; 
 let authenticationStatus = isAuthenticated ? "Authenticated" : "Not authenticated";
 console.log(authenticationStatus);
+
+let role = "subscriber";
+let dietaryServicesAccess; 
+
+switch(role) {
+    case "employee":
+        dietaryServicesAccess = "Full Access"
+        break;
+    case "enrolled member": 
+        dietaryServicesAccess = "Full access and one-on-one interactions with a dietician";
+        break;
+    case "subscriber":
+        dietaryServicesAccess = "Partial access"
+        break;
+    default:
+        dietaryServicesAccess = "No access, enroll or subscribe to avail this facility";
+        break;
+} console.log(`Your role is ${role}: ${dietaryServicesAccess}`);
