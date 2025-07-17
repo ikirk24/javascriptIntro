@@ -6,10 +6,12 @@
         // Check if inputs are valid numbers
         if (!isNaN(num1) && !isNaN(num2)) {
         // Perform the operation
-                        let result = multiply(num1, num2);
-    
+                        let resultMult = multiply(num1, num2);
+                        let resultAdd = add(num1, num2);
+                        let resultDiv = div(num1, num2);
+
                         // Display the result
-                        displayResult(result);
+                        displayResult(resultMult, resultAdd, resultDiv);
                     } else {
                         displayResult('Please enter valid numbers');
                     }
@@ -22,10 +24,25 @@
                     // Multiply the numbers
                     return a * b;
                 }
+
+                function add(a, b) {
+                    // Introduce a debugger statement to pause execution
+                    debugger;
+
+                    // Add the numbers 
+                    return a + b;
+                }
+
+                function div(a, b){
+                    //Introduce a debugger statement to pause execution
+                    debugger;
+
+                    //Divide the numbers 
+                    return a / b;
+                }
     
-                function displayResult(result) {
+                function displayResult(resultMult, resultAdd, resultDiv) {
                     // Display the result in the paragraph element
                     const resultElement = document.getElementById('result');
-                    resultElement.textContent = `The result is: ${result}`;
+                    resultElement.textContent = `The product is: ${resultMult}. The sum is: ${resultAdd}. The quotient is: ${resultDiv}.`
                 }
-            
